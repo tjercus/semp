@@ -10,7 +10,7 @@ const smartMeterOptions = {
 };
 
 // topic root for my house
-const TOPIC_ROOT = "loef6";
+const TOPIC_ROOT = process.env.TOPIC_ROOT || "house";
 // topic root for the group of smart energy meter apps
 const DOMAIN_ROOT = "SEM";
 
@@ -23,11 +23,12 @@ smartMeter.on("connected", () => {
   mqttClient.publish(`${TOPIC_ROOT}/presence`, "smart meter is online");
 });
 smartMeter.on("telegram", (telegram) => {
-  mqttClient.publish(`${TOPIC_ROOT}/${DOMAIN_ROOT}/telegram`, telegram);
+  mqttClient.publish(`${TOPIC_ROOT}/${DOMAIN_ROOT}/telegram`, JSON.stringify(telegram));
 });
 smartMeter.on("disconnected", () => {
   console.log("... SEMP disconnected from smart meter");
 });
 
-console.log("SEMP connecting to smart meter ...");
+console.log(`SEMP connecting to smart meter with broker ${process.env.MQTT_BROKER_URL}`);
+mqttClient.publish(`${TOPIC_ROOT}/presence`, "connecting to smart meter");
 smartMeter.connect();
