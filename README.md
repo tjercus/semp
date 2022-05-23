@@ -9,6 +9,7 @@ You need an MQTT broker (in your LAN or Cloud) to handle the data.
 You need some environment variables:
 - MQTT_BROKER_URL="mqtt://my.broker.com/"
 - TOPIC_ROOT="office_nr_9" (defaults to "house")
+- (optional) DEBUG='mqttjs*'
 
 create a file called .env (dot env) and put the envs (keys + values) in it.
 

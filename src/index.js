@@ -3,7 +3,7 @@ const SmartMeter = require("node-dsmr");
 const mqtt = require("mqtt");
 
 const smartMeterOptions = {
-  port: "/dev/ttyUSB1",
+  port: "/dev/ttyUSB0",
   baudrate: 115200, // DSMR 4.2
   databits: 8,
   parity: "none",
