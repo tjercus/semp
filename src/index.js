@@ -25,5 +25,9 @@ smartMeter.on("telegram", telegram => {
   console.log("telegram received", telegram);
   // mqttClient.publish(`${TOPIC_ROOT}/SEM/telegram`, telegram);
 });
+smartMeter.on('disconnected', () => {
+  console.log("smart meter is offline");
+})
 
-console.log("SEMP started ...");
+console.log("SEMP connecting to smart meter ...");
+smartMeter.connect();
