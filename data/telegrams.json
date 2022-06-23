@@ -310,6 +310,45 @@
       "meterModel": "XMX5LGBBFFB231325064",
       "dsmrVersion": 4.2,
       "timestamp": 1653312574
+    },
+    {
+      "power": {
+        "equipmentId": "G00_etc.",
+        "totalConsumed1": 10859.792,
+        "totalProduced1": 1095.174,
+        "totalConsumed2": 9034.084,
+        "totalProduced2": 2600.13,
+        "activeTariff": 2,
+        "actualConsumed": 0.094,
+        "actualProduced": 2.032,
+        "failures": 3,
+        "failuresLong": 9,
+        "failureLog": [],
+        "voltageSagsL1": 0,
+        "voltageSagsL2": 4,
+        "voltageSagsL3": 0,
+        "voltageSwellsL1": 0,
+        "voltageSwellsL2": 0,
+        "voltageSwellsL3": 0,
+        "instantaneousCurrentL1": 1,
+        "instantaneousCurrentL2": 1,
+        "instantaneousCurrentL3": 9,
+        "instantaneousConsumedElectricityL1": 0.003,
+        "instantaneousConsumedElectricityL2": 0.091,
+        "instantaneousConsumedElectricityL3": 0,
+        "instantaneousProducedElectricityL1": 0,
+        "instantaneousProducedElectricityL2": 0,
+        "instantaneousProducedElectricityL3": 2.032
+      },
+      "gas": {
+        "equipmentId": "G00_etc",
+        "timestamp": 1655712000,
+        "totalConsumed": 13236.066,
+        "reportedPeriod": 60
+      },
+      "meterModel": "XMX5LGBBFFB231325064",
+      "dsmrVersion": 4.2,
+      "timestamp": 1655715500
     }
   ]
 }

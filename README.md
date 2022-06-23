@@ -16,12 +16,13 @@ create a file called .env (dot env) and put the envs (keys + values) in it.
 ## running
 
 ### run a local test:
-- start your MQTT broker on your LAN
+- start your MQTT broker on a machine on your LAN
 - put the broker URL in the .env file
 - npm run start
 
-### run via a systemd demon 
+### run via pm2 
 
-(Ubuntu, Rapsberry PI OS etc.)
+Allows you to 'daemonize' the service, so it runs when you close your terminal to your server, or when
+you restart your machine.
 
-see: https://nodesource.com/blog/running-your-node-js-app-with-systemd-part-1/
+https://pm2.keymetrics.io/docs/usage/quick-start/
